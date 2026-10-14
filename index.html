@@ -4,126 +4,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WL Tool FAQs - Kuwait</title>
   <style>
+    /* Visual styling aligned with WL Kit Finder */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     }
 
     body {
-      background-color: #f0f0f0;
+      background-color: #e9edf2;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       min-height: 100vh;
-      padding: 30px 20px;
-      color: #333333;
+      padding: 32px 16px;
+      color: #1f2937;
     }
 
     .app-container {
       width: 100%;
       max-width: 920px;
-      border: 5px solid #000000;
-      border-radius: 8px;
+      border: 4px solid #000000;
+      border-radius: 12px;
       background-color: #ffffff;
-      padding: 30px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      animation: popIn 0.25s ease-out;
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
     }
 
     .header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 24px;
-      border-bottom: 3px solid #000000;
-      padding-bottom: 18px;
-      gap: 16px;
+      background-color: #003057;
+      color: #ffffff;
+      border-bottom: 4px solid #000000;
+      padding: 16px 22px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
     .brand-lockup {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 12px;
     }
 
-    .slb-logo {
-      height: 48px;
-      width: auto;
-      max-width: 105px;
-      object-fit: contain;
+    .brand-logo {
+      background: #ffffff;
+      border: 2px solid rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      padding: 4px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .rig-logo {
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+
+    .brand-text {
+      border-left: 2px solid rgba(255, 255, 255, 0.25);
+      padding-left: 12px;
     }
 
     .app-title {
-      font-size: 26px;
-      font-weight: 800;
-      color: #003366;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
     }
 
     .app-subtitle {
-      font-size: 13px;
-      color: #555555;
-      margin-top: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: 2px;
     }
 
     .header-actions {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       align-items: center;
     }
 
     .btn {
       cursor: pointer;
       font-weight: 700;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      font-size: 14px;
       padding: 8px 16px;
-      border-radius: 5px;
+      border-radius: 8px;
       border: 2px solid #000000;
-      transition: all 0.15s ease;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+      transition: background-color 0.15s ease, transform 0.1s ease;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 6px;
     }
 
-    .btn:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-
     .btn:active {
-      transform: translateY(0);
+      transform: scale(0.95);
     }
 
     .btn-admin {
-      background-color: #003366;
+      background-color: #003057;
       color: #ffffff;
     }
 
-    .btn-admin.logged-in {
-      background-color: #006633;
-      border-color: #004d26;
+    .btn-admin:hover {
+      background-color: #002240;
+    }
+
+    .header .btn-admin {
+      background-color: #002240;
+      border-color: rgba(0, 0, 0, 0.4);
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+
+    .header .btn-admin:hover {
+      background-color: #001830;
+    }
+
+    .btn-admin.logged-in,
+    .header .btn-admin.logged-in {
+      background-color: #1a7a3c;
+      border-color: #000000;
+    }
+
+    .btn-admin.logged-in:hover,
+    .header .btn-admin.logged-in:hover {
+      background-color: #145a2c;
     }
 
     .btn-secondary {
       background-color: #ffffff;
-      color: #003366;
+      color: #1f2937;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f3f4f6;
     }
 
     .btn-danger {
-      background-color: #cc0000;
+      background-color: #c0392b;
       color: #ffffff;
+    }
+
+    .btn-danger:hover {
+      background-color: #962d22;
     }
 
     .selectors {
       display: flex;
       gap: 16px;
-      margin-bottom: 24px;
+      padding: 22px 24px;
+      background-color: #f7f9fb;
       flex-wrap: wrap;
     }
 
@@ -135,35 +183,56 @@
     label {
       display: block;
       font-weight: 700;
-      font-size: 13px;
-      color: #003366;
-      margin-bottom: 6px;
+      font-size: 12px;
+      color: #374151;
+      margin-bottom: 4px;
+    }
+
+    .selector-group label {
+      font-size: 12px;
+      color: #6b7280;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
     }
 
     select, input[type="text"], input[type="password"], textarea {
       width: 100%;
-      padding: 10px 14px;
+      padding: 10px 12px;
       border: 2px solid #000000;
-      border-radius: 5px;
+      border-radius: 8px;
       font-size: 14px;
-      background-color: #eef3fb;
-      color: #003366;
+      font-weight: 600;
+      background-color: #ffffff;
+      color: #1f2937;
       font-family: inherit;
+    }
+
+    .selector-group select {
+      border-width: 3px;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 11px 14px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
     }
 
     select:focus, input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
       outline: none;
-      border-color: #000000;
-      background-color: #dceeff;
+      border-color: #0066a1;
+    }
+
+    select:disabled, input:disabled, textarea:disabled {
+      background-color: #f3f4f6;
+      color: #6b7280;
+      border-color: #d1d5db;
     }
 
     .result-box {
-      border: 3px solid #000000;
-      border-radius: 6px;
-      padding: 24px 28px;
-      background-color: #f9fbff;
+      margin: 0 24px 24px;
+      border: 2px solid #000000;
+      border-radius: 12px;
+      padding: 20px 24px;
+      background-color: #ffffff;
       display: none;
       animation: fadeIn 0.2s ease-in-out;
     }
@@ -177,26 +246,31 @@
       display: block;
     }
 
+    .selectors + .result-box,
+    .selectors ~ .no-result {
+      margin-top: 0;
+    }
+
     .question-label, .answer-label, .remarks-label, .notes-label {
       font-size: 12px;
       text-transform: uppercase;
-      font-weight: 800;
-      color: #555555;
+      font-weight: 700;
+      color: #6b7280;
       margin-bottom: 6px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.1em;
     }
 
     .question-text {
       font-size: 18px;
       font-weight: 700;
-      color: #003366;
+      color: #003057;
       margin-bottom: 18px;
     }
 
     .answer-text {
       font-size: 2em;
-      font-weight: 900;
-      color: #cc0000;
+      font-weight: 800;
+      color: #c0392b;
       margin-bottom: 22px;
       line-height: 1.3;
       word-break: break-word;
@@ -204,45 +278,51 @@
 
     .remarks-text {
       font-size: 15px;
-      color: #333333;
+      color: #1f2937;
       margin-bottom: 20px;
       line-height: 1.6;
       padding: 12px 16px;
       background-color: #fff8e1;
-      border-left: 4px solid #000000;
-      border-radius: 3px;
+      border: 2px solid #000000;
+      border-left: 6px solid #e67e22;
+      border-radius: 8px;
     }
 
     .notes-text {
       font-size: 15px;
-      color: #333333;
+      color: #1f2937;
       line-height: 1.6;
       padding: 12px 16px;
-      background-color: #e8f5e9;
-      border-left: 4px solid #000000;
-      border-radius: 3px;
+      background-color: #f0f7fd;
+      border: 2px solid #000000;
+      border-left: 6px solid #0066a1;
+      border-radius: 8px;
     }
 
     .auto-badge {
       display: inline-block;
       font-size: 11px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
       font-weight: 700;
-      background-color: #003366;
+      background-color: #0066a1;
       color: #ffffff;
       padding: 2px 8px;
-      border-radius: 10px;
+      border-radius: 4px;
       margin-left: 8px;
       vertical-align: middle;
-      letter-spacing: 0.5px;
+      letter-spacing: 0;
+      text-transform: none;
     }
 
     .no-result {
-      padding: 30px;
+      margin: 0 24px 24px;
+      padding: 40px 16px;
       text-align: center;
-      background: #fafafa;
-      border: 2px dashed #999;
-      border-radius: 6px;
-      color: #777;
+      background: #ffffff;
+      border: 2px dashed #d1d5db;
+      border-radius: 12px;
+      color: #6b7280;
+      font-size: 14px;
       font-style: italic;
       display: none;
     }
@@ -254,12 +334,14 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.65);
+      background: rgba(0, 0, 0, 0.6);
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
       display: none !important;
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      padding: 20px;
+      padding: 16px;
     }
 
     .modal-overlay.active {
@@ -269,19 +351,21 @@
     .modal-card {
       background: #ffffff;
       border: 4px solid #000000;
-      border-radius: 8px;
+      border-radius: 12px;
+      overflow: hidden;
       width: 100%;
       max-width: 820px;
       max-height: 90vh;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      animation: popIn 0.2s ease-out;
     }
 
     .modal-header {
-      padding: 16px 22px;
+      padding: 14px 20px;
       border-bottom: 3px solid #000000;
-      background-color: #003366;
+      background-color: #003057;
       color: #ffffff;
       display: flex;
       justify-content: space-between;
@@ -290,24 +374,32 @@
 
     .modal-header h2 {
       font-size: 17px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .modal-header button {
+      border-radius: 4px;
+      padding: 0 6px;
+    }
+
+    .modal-header button:hover {
+      background-color: rgba(255, 255, 255, 0.2) !important;
     }
 
     .modal-body {
-      padding: 22px;
+      padding: 20px;
       overflow-y: auto;
       flex: 1;
+      font-size: 14px;
     }
 
     .modal-footer {
-      padding: 14px 22px;
-      border-top: 2px solid #000000;
-      background-color: #f7f9fc;
+      padding: 12px 20px;
+      border-top: 1px solid #d1d5db;
+      background-color: #f3f4f6;
       display: flex;
       justify-content: flex-end;
-      gap: 12px;
+      gap: 8px;
       flex-wrap: wrap;
     }
 
@@ -323,16 +415,21 @@
       padding: 8px 14px;
       font-weight: 700;
       font-size: 13px;
-      background: #eef3fb;
+      background: #f0f4f8;
       border: 2px solid #000000;
       border-bottom: none;
-      border-radius: 5px 5px 0 0;
+      border-radius: 8px 8px 0 0;
       cursor: pointer;
-      color: #003366;
+      color: #003057;
+      transition: background-color 0.15s ease;
+    }
+
+    .tab-btn:hover {
+      background: #e2e8f0;
     }
 
     .tab-btn.active {
-      background: #003366;
+      background: #003057;
       color: #ffffff;
     }
 
@@ -346,14 +443,15 @@
 
     .faq-list-item {
       border: 2px solid #000000;
-      border-radius: 6px;
+      border-radius: 12px;
       padding: 14px;
       margin-bottom: 12px;
-      background: #fafafa;
+      background: #ffffff;
+      transition: background-color 0.15s ease;
     }
 
     .faq-list-item:hover {
-      background: #f0f4f9;
+      background: #f0f7fd;
     }
 
     .faq-item-header {
@@ -366,13 +464,13 @@
 
     .faq-item-title {
       font-weight: 700;
-      color: #003366;
+      color: #003057;
       font-size: 15px;
     }
 
     .faq-item-answer {
-      font-weight: 800;
-      color: #cc0000;
+      font-weight: 700;
+      color: #c0392b;
       font-size: 15px;
       margin-bottom: 6px;
     }
@@ -381,25 +479,28 @@
       position: fixed;
       bottom: 24px;
       right: 24px;
-      background: #003366;
+      background: #003057;
       color: #ffffff;
       padding: 12px 20px;
-      border-radius: 6px;
+      border-radius: 8px;
       border: 2px solid #000000;
       font-weight: 700;
       font-size: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
       display: none;
       z-index: 10000;
     }
 
     @media (max-width: 640px) {
-      .app-title { font-size: 20px; }
-      .header { flex-direction: column; align-items: flex-start; }
-      .selectors { flex-direction: column; }
+      body { padding: 16px 10px; }
+      .header { padding: 14px 16px; }
+      .rig-logo { width: 32px; height: 32px; }
+      .brand-logo { padding: 2px 8px; }
+      .app-title { font-size: 18px; }
+      .selectors { flex-direction: column; padding: 18px 16px; }
+      .result-box, .no-result { margin: 0 16px 16px; padding: 18px; }
       .answer-text { font-size: 1.5em; }
-      .btn { width: 100%; justify-content: center; }
-      .header-actions { width: 100%; }
+      .modal-footer .btn { flex: 1; }
     }
   </style>
 </head>
@@ -410,8 +511,19 @@
   <!-- HEADER (Protected: only Admin button is present) -->
   <div class="header">
     <div class="brand-lockup">
-      <img class="slb-logo" src="data:image/png;base64,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" alt="SLB Logo">
-      <div>
+      <div class="brand-logo">
+        <svg class="rig-logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Oil rig logo">
+          <title>Oil rig</title>
+          <path d="M24 4 L14 38 M24 4 L34 38" stroke="#003057" stroke-width="2.6" stroke-linecap="round"></path>
+          <path d="M21.4 13 H26.6 M18.8 22 H29.2 M16.2 31 H31.8" stroke="#003057" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M21.4 13 L29.2 22 L16.2 31 M26.6 13 L18.8 22 L31.8 31" stroke="#0066a1" stroke-width="1.4" stroke-linecap="round"></path>
+          <rect x="21" y="2" width="6" height="3.5" rx="1" fill="#003057"></rect>
+          <rect x="8" y="37" width="32" height="4" rx="1" fill="#003057"></rect>
+          <path d="M12 41 V46 M36 41 V46" stroke="#003057" stroke-width="2.6" stroke-linecap="round"></path>
+          <path d="M27 4.5 L33 6.5 L27 8.5 Z" fill="#e67e22"></path>
+        </svg>
+      </div>
+      <div class="brand-text">
         <div class="app-title">WL Tool FAQs</div>
         <div class="app-subtitle">Wireline Tool Frequently Asked Questions - Kuwait v0.1 (rsuruelos@slb.com)</div>
       </div>
@@ -470,7 +582,7 @@
         <label for="adminPasswordInput">Password</label>
         <input type="password" id="adminPasswordInput" placeholder="Enter password" style="font-size: 16px; letter-spacing: 2px;" onkeydown="if(event.key==='Enter') verifyPassword()">
       </div>
-      <div id="passwordError" style="color: #cc0000; font-size: 13px; font-weight: 700; display: none; margin-top: 6px;">
+      <div id="passwordError" style="color: #c0392b; font-size: 13px; font-weight: 700; display: none; margin-top: 6px;">
         Incorrect password!
       </div>
     </div>
@@ -491,9 +603,9 @@
     <div class="modal-body">
 
       <!-- Exclusive Admin SharePoint Overwrite Action Area -->
-      <div style="background:#eef3fb; border:2px solid #003366; border-radius:6px; padding:14px; margin-bottom:18px; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+      <div style="background:#f0f4f8; border:2px solid #003057; border-radius:6px; padding:14px; margin-bottom:18px; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
         <div style="flex:1; min-width:260px;">
-          <div style="font-weight:800; font-size:13px; color:#003366; text-transform:uppercase; margin-bottom:3px;">
+          <div style="font-weight:800; font-size:13px; color:#003057; text-transform:uppercase; margin-bottom:3px;">
             📥 Overwrite File in SharePoint (Admin Only)
           </div>
           <p style="font-size:12px; color:#444;">
@@ -580,8 +692,8 @@
 
       <!-- TAB 2: MANAGE TOOLS -->
       <div id="tabToolsContent" style="display: none;">
-        <div style="margin-bottom: 18px; padding: 14px; background: #eef3fb; border: 2px solid #000000; border-radius: 6px;">
-          <h3 style="font-size: 14px; font-weight: 800; color: #003366; text-transform: uppercase; margin-bottom: 10px;">Add New Tool</h3>
+        <div style="margin-bottom: 18px; padding: 14px; background: #f0f4f8; border: 2px solid #000000; border-radius: 6px;">
+          <h3 style="font-size: 14px; font-weight: 800; color: #003057; text-transform: uppercase; margin-bottom: 10px;">Add New Tool</h3>
           <div style="display: flex; gap: 10px; flex-wrap: wrap;">
             <div style="flex: 1; min-width: 140px;">
               <input type="text" id="newToolKey" placeholder="Tool Key (e.g. xpt)">
@@ -595,7 +707,7 @@
 
         <div id="adminToolList"><div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border: 2px solid rgb(0, 0, 0); border-radius: 5px; margin-bottom: 8px; background: rgb(250, 250, 250);">
         <div>
-          <strong style="color:#003366; font-size:15px;">USIT</strong>
+          <strong style="color:#003057; font-size:15px;">USIT</strong>
           <span style="font-size:12px; color:#666; margin-left:8px;">[Key: usis]</span>
           <span class="auto-badge" style="background:#555;">4 Questions</span>
         </div>
@@ -605,7 +717,7 @@
         </div>
       </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border: 2px solid rgb(0, 0, 0); border-radius: 5px; margin-bottom: 8px; background: rgb(250, 250, 250);">
         <div>
-          <strong style="color:#003366; font-size:15px;">HRMS</strong>
+          <strong style="color:#003057; font-size:15px;">HRMS</strong>
           <span style="font-size:12px; color:#666; margin-left:8px;">[Key: hrms]</span>
           <span class="auto-badge" style="background:#555;">1 Questions</span>
         </div>
@@ -615,7 +727,7 @@
         </div>
       </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border: 2px solid rgb(0, 0, 0); border-radius: 5px; margin-bottom: 8px; background: rgb(250, 250, 250);">
         <div>
-          <strong style="color:#003366; font-size:15px;">PPC</strong>
+          <strong style="color:#003057; font-size:15px;">PPC</strong>
           <span style="font-size:12px; color:#666; margin-left:8px;">[Key: ppc]</span>
           <span class="auto-badge" style="background:#555;">1 Questions</span>
         </div>
@@ -625,7 +737,7 @@
         </div>
       </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border: 2px solid rgb(0, 0, 0); border-radius: 5px; margin-bottom: 8px; background: rgb(250, 250, 250);">
         <div>
-          <strong style="color:#003366; font-size:15px;">EMM</strong>
+          <strong style="color:#003057; font-size:15px;">EMM</strong>
           <span style="font-size:12px; color:#666; margin-left:8px;">[Key: emm]</span>
           <span class="auto-badge" style="background:#555;">1 Questions</span>
         </div>
@@ -635,7 +747,7 @@
         </div>
       </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border: 2px solid rgb(0, 0, 0); border-radius: 5px; margin-bottom: 8px; background: rgb(250, 250, 250);">
         <div>
-          <strong style="color:#003366; font-size:15px;">Resolve-iX</strong>
+          <strong style="color:#003057; font-size:15px;">Resolve-iX</strong>
           <span style="font-size:12px; color:#666; margin-left:8px;">[Key: resolve]</span>
           <span class="auto-badge" style="background:#555;">4 Questions</span>
         </div>
@@ -645,7 +757,7 @@
         </div>
       </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border: 2px solid rgb(0, 0, 0); border-radius: 5px; margin-bottom: 8px; background: rgb(250, 250, 250);">
         <div>
-          <strong style="color:#003366; font-size:15px;">Spear-TTiX</strong>
+          <strong style="color:#003057; font-size:15px;">Spear-TTiX</strong>
           <span style="font-size:12px; color:#666; margin-left:8px;">[Key: spear]</span>
           <span class="auto-badge" style="background:#555;">3 Questions</span>
         </div>
@@ -655,7 +767,7 @@
         </div>
       </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border: 2px solid rgb(0, 0, 0); border-radius: 5px; margin-bottom: 8px; background: rgb(250, 250, 250);">
         <div>
-          <strong style="color:#003366; font-size:15px;">TuffTRAC</strong>
+          <strong style="color:#003057; font-size:15px;">TuffTRAC</strong>
           <span style="font-size:12px; color:#666; margin-left:8px;">[Key: tufftrac]</span>
           <span class="auto-badge" style="background:#555;">2 Questions</span>
         </div>
@@ -665,7 +777,7 @@
         </div>
       </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border: 2px solid rgb(0, 0, 0); border-radius: 5px; margin-bottom: 8px; background: rgb(250, 250, 250);">
         <div>
-          <strong style="color:#003366; font-size:15px;">DSI</strong>
+          <strong style="color:#003057; font-size:15px;">DSI</strong>
           <span style="font-size:12px; color:#666; margin-left:8px;">[Key: dsi]</span>
           <span class="auto-badge" style="background:#555;">1 Questions</span>
         </div>
@@ -675,7 +787,7 @@
         </div>
       </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; border: 2px solid rgb(0, 0, 0); border-radius: 5px; margin-bottom: 8px; background: rgb(250, 250, 250);">
         <div>
-          <strong style="color:#003366; font-size:15px;">MSIP</strong>
+          <strong style="color:#003057; font-size:15px;">MSIP</strong>
           <span style="font-size:12px; color:#666; margin-left:8px;">[Key: msip]</span>
           <span class="auto-badge" style="background:#555;">1 Questions</span>
         </div>
@@ -689,7 +801,7 @@
       <!-- TAB 3: CHANGE PASSWORD -->
       <div id="tabPasswordContent" style="display: none;">
         <div style="max-width: 500px; padding: 16px; background: #f9fbff; border: 2px solid #000000; border-radius: 6px;">
-          <h3 style="font-size: 14px; font-weight: 800; color: #003366; text-transform: uppercase; margin-bottom: 12px;">Change Admin Password</h3>
+          <h3 style="font-size: 14px; font-weight: 800; color: #003057; text-transform: uppercase; margin-bottom: 12px;">Change Admin Password</h3>
           <p style="font-size: 12px; color: #555; margin-bottom: 14px;">Update the password required to access the admin portal and edit tools or questions.</p>
           
           <div class="form-group">
@@ -707,7 +819,7 @@
             <input type="password" id="changeConfirmPassword" placeholder="Re-enter new password">
           </div>
 
-          <div id="passwordChangeError" style="color: #cc0000; font-size: 12px; font-weight: 700; display: none; margin-bottom: 12px;"></div>
+          <div id="passwordChangeError" style="color: #c0392b; font-size: 12px; font-weight: 700; display: none; margin-bottom: 12px;"></div>
           <div id="passwordChangeSuccess" style="color: #008844; font-size: 12px; font-weight: 700; display: none; margin-bottom: 12px;">Password updated successfully!</div>
 
           <div style="display: flex; gap: 10px; margin-top: 14px;">
@@ -1416,7 +1528,7 @@
       row.style.cssText = 'display:flex; justify-content:space-between; align-items:center; padding:10px 14px; border:2px solid #000; border-radius:5px; margin-bottom:8px; background:#fafafa;';
       row.innerHTML = `
         <div>
-          <strong style="color:#003366; font-size:15px;">${escapeHtml(tool.name)}</strong>
+          <strong style="color:#003057; font-size:15px;">${escapeHtml(tool.name)}</strong>
           <span style="font-size:12px; color:#666; margin-left:8px;">[Key: ${escapeHtml(tool.key)}]</span>
           <span class="auto-badge" style="background:#555;">${qCount} Questions</span>
         </div>
